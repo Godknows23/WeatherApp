@@ -1,26 +1,16 @@
-import _ from 'lodash';
- import './style.css';
- import Icon from './icon.png';
-import Data from './data.xml';
-import Notes from './data.csv';
+import weather from "./modules/weather";
+import view from "./modules/view";
 
- function component() {
-   const element = document.createElement('div');
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
-   // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
-   // Add the image to our existing div.
-   const myIcon = new Image();
-   myIcon.src = Icon;
-
-   element.appendChild(myIcon);
-
-  console.log(Data);
-  console.log(Notes);
-
-   return element;
- }
-
- document.body.appendChild(component());
+searchBtn.addEventListener("click", async () => {
+  if (searchInput.value === "") return;
+  const weatherData = await weather.getData(searchInput.value);
+  view.setSearchResult(weatherData);
+});

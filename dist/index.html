@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather APP</title>
+    <title>My Weather</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,7 +20,7 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="page-name"><i class="fas fa-cloud-sun"></i>Weather App</h1>
+      <h1 class="page-name"><i class="fas fa-cloud-sun"></i>My Weather</h1>
     </header>
     <main class="main">
       <form class="form" id="searchForm" novalidate>
@@ -28,10 +28,12 @@
           class="input"
           id="searchInput"
           type="text"
-          placeholder="Enter city name"
+          placeholder="input city or town"
         />
         <button class="btn btn-submit" id="searchBtn" type="submit">
-          Search
+            <i class="fas light fa-magnifying-glass-location"> Search </i>
+            
+            
         </button>
       </form>
       <div class="search-result" id="searchResult">
