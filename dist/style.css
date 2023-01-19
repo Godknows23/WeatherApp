@@ -103,7 +103,7 @@
     border-radius: 5px;
     margin: 4rem auto;
     background-color: var(--primary-dark);
-    color: gold;
+    color: var(--primary-light);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   
